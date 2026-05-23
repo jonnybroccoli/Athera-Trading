@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inbox</title>
+
+    <link rel="stylesheet" href="inbox.css">
+    <script src="inbox.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="topbar">
+        <div style="display: flex; align-items: center; gap: 10px; flex-shrink: 0;">
+            <img id="logo" src="../Assets/atheralogo.png">
+            <span id="name">Atheramons</span>
+        </div>
+        <div style="position: relative; flex: 1; max-width: 400px;">
+            <input type="text" id="search-input" placeholder="Search">
+            <div id="search-dropdown"></div>
+        </div>
+        <div class="nav">
+            <button class="home-btn" onclick="window.location.href='../Main Page/main.html'">Home</button>
+            <button class="post-btn" onclick="window.location.href='../Post Listing Page/post.html'">Post Trade</button>
+            <button class="inbox-btn" onclick="window.location.href='../Inbox Messaging Page/inbox.html'">Inbox</button>
+            <button class="profile-btn"
+                onclick="window.location.href='../User Profile Page/profile.html'">Profile</button>
+            <button class="dsc-button">
+                <i class="fa-brands fa-discord"></i> Verify with Discord
+            </button>
+        </div>
+    </div>
+
+    <div class="inbox-container">
+        <!-- Conversations Sidebar -->
+        <div class="conversations-box">
+            <h3 class="box-title">Conversations</h3>
+            <div class="people-list">
+                <div class="person active" onclick="selectConvo(this, 'TraderKing99')">
+                    <div class="avatar" style="background:#e56d4f;">TK</div>
+                    <div class="meta">
+                        <span class="name">TraderKing99</span>
+                        <span class="preview">interested in your dominus?</span>
+                    </div>
+                    <div class="unread-dot"></div>
+                </div>
+                <div class="person" onclick="selectConvo(this, 'BuilderPro123')">
+                    <div class="avatar" style="background:#7289DA;">BP</div>
+                    <div class="meta">
+                        <span class="name">BuilderPro123</span>
+                        <span class="preview">sounds good to me</span>
+                    </div>
+                </div>
+                <div class="person" onclick="selectConvo(this, 'RobloxFan2020')">
+                    <div class="avatar" style="background:#3B6D11;">RF</div>
+                    <div class="meta">
+                        <span class="name">RobloxFan2020</span>
+                        <span class="preview">what's your offer?</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Area -->
+        <div class="message-area">
+            <div class="chat-header">
+                <div class="avatar" style="background:#e56d4f;">TK</div>
+                <span class="chat-username">TraderKing99</span>
+            </div>
+            <div class="chat-container" id="chat-container">
+                <div class="chat-message received">
+                    <div class="bubble">hey! are you still trading your Dominus?</div>
+                </div>
+                <div class="chat-message sent">
+                    <div class="bubble">yeah still have it, what are you offering?</div>
+                </div>
+                <div class="chat-message received">
+                    <div class="bubble">I can do Bluesteel Crown + 5k robux</div>
+                </div>
+                <div class="chat-message sent">
+                    <div class="bubble">hmm let me think about it</div>
+                </div>
+                <div class="chat-message received">
+                    <div class="bubble">interested in your dominus?</div>
+                </div>
+            </div>
+            <div class="message-input-container">
+                <textarea class="message-input" id="message-input" placeholder="Type a message..." rows="1"></textarea>
+                <button class="send-button" onclick="sendMessage()">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

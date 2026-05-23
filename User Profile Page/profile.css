@@ -1,0 +1,92 @@
+/* Website Body */
+body {
+    background-color: #141414;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Top Bar */
+.topbar {
+    background-color: #e56d4f;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 20px;
+    border-bottom: 5px solid #d35340;
+    justify-content: space-between;
+}
+
+#logo {
+    height: 50px;
+    flex-shrink: 0;
+}
+
+#name {
+    font-size: 24px;
+    font-weight: bold;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+#search-input {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    flex: 1;
+    max-width: 400px;
+    min-width: 0;
+}
+
+#search-dropdown {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    display: none;
+}
+
+.nav {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.home-btn,
+.post-btn,
+.inbox-btn,
+.profile-btn {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+
+.dsc-button {
+    background-color: #7289DA;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Button Hover Effects */
+.home-btn:hover,
+.post-btn:hover,
+.inbox-btn:hover,
+.profile-btn:hover {
+    background-color: #cfcfcf;
+}
+
+.dsc-button:hover {
+    background-color: #5b6ae0
+}

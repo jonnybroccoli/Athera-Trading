@@ -1,0 +1,335 @@
+/* Website Body */
+body {
+    background-color: #141414;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Top Bar */
+.topbar {
+    background-color: #e56d4f;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 20px;
+    border-bottom: 5px solid #d35340;
+    justify-content: space-between;
+}
+
+#logo {
+    height: 50px;
+    flex-shrink: 0;
+}
+
+#name {
+    font-size: 24px;
+    font-weight: bold;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+#search-input {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    flex: 1;
+    max-width: 400px;
+    min-width: 0;
+}
+
+#search-dropdown {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    display: none;
+}
+
+.nav {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.home-btn,
+.post-btn,
+.inbox-btn,
+.profile-btn {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+
+.dsc-button {
+    background-color: #7289DA;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Button Hover Effects */
+.home-btn:hover,
+.post-btn:hover,
+.inbox-btn:hover,
+.profile-btn:hover {
+    background-color: #cfcfcf;
+}
+
+.dsc-button:hover {
+    background-color: #5b6ae0
+}
+
+/* Inbox Layout */
+.inbox-container {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    gap: 20px;
+    overflow: hidden;
+}
+
+/* Conversations Sidebar */
+.conversations-box {
+    width: 260px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.box-title {
+    font-size: 15px;
+    font-weight: bold;
+    color: #ccc;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.people-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.person {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+}
+
+.person:hover {
+    background-color: #2a2a2a;
+}
+
+.person.active {
+    background-color: #2a2a2a;
+    border-left: 3px solid #e56d4f;
+}
+
+.avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+    flex-shrink: 0;
+}
+
+.meta {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    flex: 1;
+}
+
+.name {
+    font-size: 13px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.preview {
+    font-size: 11px;
+    color: #888;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.unread-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #e56d4f;
+    flex-shrink: 0;
+}
+
+/* Chat Area */
+.message-area {
+    flex: 1;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 16px;
+    border-bottom: 1px solid #2a2a2a;
+    flex-shrink: 0;
+}
+
+.chat-username {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.chat-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px;
+    overflow-y: auto;
+}
+
+.chat-message {
+    display: flex;
+}
+
+.chat-message.received {
+    justify-content: flex-start;
+}
+
+.chat-message.sent {
+    justify-content: flex-end;
+}
+
+.bubble {
+    max-width: 65%;
+    padding: 9px 13px;
+    border-radius: 14px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.received .bubble {
+    background-color: #2a2a2a;
+    color: #ddd;
+    border-bottom-left-radius: 4px;
+}
+
+.sent .bubble {
+    background-color: #e56d4f;
+    color: white;
+    border-bottom-right-radius: 4px;
+}
+
+/* Input Area */
+.message-input-container {
+    display: flex;
+    gap: 8px;
+    align-items: flex-end;
+    padding: 12px 16px;
+    border-top: 1px solid #2a2a2a;
+    flex-shrink: 0;
+}
+
+.message-input {
+    flex: 1;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2a2a2a;
+    color: white;
+    font-size: 13px;
+    resize: none;
+    outline: none;
+    font-family: Arial, sans-serif;
+}
+
+.message-input::placeholder {
+    color: #666;
+}
+
+.send-button {
+    background-color: #e56d4f;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.send-button:hover {
+    background-color: #d35340;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+.inbox-container {
+    height: calc(100vh - 120px);
+    /* increase from 75px to 85px */
+}
+
+.message-area {
+    overflow: hidden;
+    /* prevents it from growing */
+}
+
+.chat-container {
+    flex: 1;
+    overflow-y: auto;
+    /* messages scroll inside, area stays fixed */
+    min-height: 0;
+    /* critical — without this flex won't shrink it */
+}
+
+.conversations-box {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.people-list {
+    flex: 1;
+    overflow-y: auto;
+    min-height: 0;
+    /* same fix needed here */
+}

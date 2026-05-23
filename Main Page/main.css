@@ -1,0 +1,271 @@
+/* Website Body */
+body {
+    background-color: #141414;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Top Bar */
+.topbar {
+    background-color: #e56d4f;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 20px;
+    border-bottom: 5px solid #d35340;
+    justify-content: space-between;
+}
+
+#logo {
+    height: 50px;
+    flex-shrink: 0;
+}
+
+#name {
+    font-size: 24px;
+    font-weight: bold;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+#search-input {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    flex: 1;
+    max-width: 400px;
+    min-width: 0;
+}
+
+#search-dropdown {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    display: none;
+}
+
+.nav {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.home-btn,
+.post-btn,
+.inbox-btn,
+.profile-btn {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+
+.dsc-button {
+    background-color: #7289DA;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Button Hover Effects */
+.home-btn:hover,
+.post-btn:hover,
+.inbox-btn:hover,
+.profile-btn:hover {
+    background-color: #cfcfcf;
+}
+
+.dsc-button:hover {
+    background-color: #5b6ae0
+}
+
+/* Sections */
+.section {
+    padding: 24px 28px 10px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.section-header h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.view-all-btn {
+    background-color: #e56d4f;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.view-all-btn:hover {
+    background-color: #d35340;
+}
+
+/* Limiteds Row */
+.limiteds-row {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.limiteds-row::-webkit-scrollbar {
+    height: 4px;
+}
+
+.limiteds-row::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+}
+
+.limited-card {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 12px;
+    min-width: 160px;
+    max-width: 160px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.limited-card:hover {
+    background-color: #2a2a2a;
+}
+
+.limited-card img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: contain;
+    border-radius: 6px;
+    background-color: #2a2a2a;
+}
+
+.limited-card .item-name {
+    font-size: 13px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.limited-badge {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 4px;
+    display: inline-block;
+    width: fit-content;
+}
+
+.limited-card .item-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #aaa;
+}
+
+.limited-card .item-price {
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Trades Row */
+.trades-row {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.trade-card {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 14px 16px;
+    min-width: 280px;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.trade-card:hover {
+    background-color: #2a2a2a;
+}
+
+.trade-card .trade-user {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.trade-card .trade-avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: #e56d4f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: bold;
+    color: white;
+    flex-shrink: 0;
+}
+
+.trade-card .trade-title {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.trade-card .trade-items {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.trade-item-pill {
+    background-color: #2a2a2a;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: #ccc;
+}
+
+.trade-card .trade-footer {
+    font-size: 11px;
+    color: #666;
+}
